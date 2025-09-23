@@ -2,6 +2,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- Permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -11,15 +21,100 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HostelManagment">
+        
+        <!-- Main Activity (Entry Point) -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Authentication Activities -->
+        <activity
+            android:name=".activity.LoginActivity"
+            android:exported="false"
+            android:theme="@style/Theme.HostelManagment.NoActionBar" />
+
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:exported="false"
+            android:theme="@style/Theme.HostelManagment.NoActionBar" />
+
+        <!-- Dashboard Activities -->
+        <activity
+            android:name=".activity.StudentDashboardActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activity.SecurityDashboardActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activity.AdminDashboardActivity"
+            android:exported="false" />
+
+        <!-- Feature Activities -->
+        <activity
+            android:name=".activity.RoomManagementActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activity.VisitorRequestActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activity.LeaveRequestActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activity.ComplaintActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activity.NoticesActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activity.EmergencyActivity"
+            android:exported="false" />
+
+        <!-- Security Activities -->
+        <activity
+            android:name=".activity.SecurityVisitorManagementActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activity.EmergencyAlertsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activity.EntryExitLogsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activity.SecurityNoticesActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activity.AccessControlActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activity.SecurityReportsActivity"
+            android:exported="false" />
+
+        <!-- Common Activities -->
+        <activity
+            android:name=".activity.ProfileActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activity.SettingsActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>
